@@ -7,7 +7,7 @@ include 'conexion.php';
 function getProductos($pdo, $searchName = '', $categoryId = '') {
     $sql = "SELECT p.id_producto, p.nombre, p.descripcion, p.marca, p.modelo, 
                    p.id_categoria, c.nombre_categoria, p.fecha_ingreso, p.stock 
-            FROM productos p
+            FROM productos p 
             LEFT JOIN categorias c ON p.id_categoria = c.id_categoria
             WHERE 1 = 1";
 
